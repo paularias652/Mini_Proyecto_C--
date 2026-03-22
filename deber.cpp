@@ -43,3 +43,43 @@ void mostrarResumenGeneral();
 void buscarEstudiante();
 string clasificarPromedio(float promedio);
 void pausar();
+
+//creacion del menu
+
+int main() {
+    int opcion;
+
+    do {
+        mostrarMenu();
+        opcion = leerOpcion();
+
+        switch (opcion) {
+            case 1:
+                registrarEstudiante();
+                break;
+            case 2:
+                mostrarEstudiantes();
+                break;
+            case 3:
+                calcularPromedios();
+                cout << "\nPromedios calculados correctamente.\n";
+                pausar();
+                break;
+            case 4:
+                mostrarResumenGeneral();
+                break;
+            case 5:
+                buscarEstudiante();
+                break;
+            case 0:
+                cout << "\nSaliendo del sistema...\n";
+                break;
+            default:
+                cout << "\nOpcion invalida. Intente de nuevo.\n";
+                pausar();
+        }
+
+    } while (opcion != 0);
+
+    return 0;
+}
