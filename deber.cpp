@@ -28,3 +28,18 @@ float promedios[MAX_ESTUDIANTES];
 bool registroActivo[MAX_ESTUDIANTES] = {false};
 
 int cantidadEstudiantes = 0;
+
+//creacion de las funciones
+
+// Prototipos
+void mostrarMenu();
+int leerOpcion();
+string leerNombre();
+float leerNota(int numeroNota);
+void registrarEstudiante();
+void mostrarEstudiantes();
+void calcularPromedios();
+void mostrarResumenGeneral();
+void buscarEstudiante();
+string clasificarPromedio(float promedio);
+void pausar();
